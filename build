@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+rm -rf dist
+mkdir -p dist
+BIN=./node_modules/.bin
+echo "(function(){" > dist/index.js
+cat src/core.js >> dist/index.js
+$BIN/lsc -cbp --no-header src/index.ls >> dist/index.js
+echo "})()" >> dist/index.js
+$BIN/uglifyjs dist/index.js > dist/index.min.js
+rm -rf web/static/assets/lib/@plotdb/qrcoder/dev
+mkdir -p web/static/assets/lib/@plotdb/qrcoder/dev
+cp -R dist/* web/static/assets/lib/@plotdb/qrcoder/dev
+echo "done."

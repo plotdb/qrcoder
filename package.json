@@ -1,0 +1,44 @@
+{
+  "name": "@plotdb/qrcode",
+  "version": "0.0.1",
+  "description": "QRCode Generator",
+  "main": "dist/index.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "start": "npx server -r web -o true"
+  },
+  "keywords": [],
+  "author": "zbryikt",
+  "license": "MIT",
+  "devDependencies": {
+    "@loadingio/bootstrap.ext": "^0.0.12",
+    "@loadingio/debounce.js": "^1.0.1",
+    "@loadingio/ldquery": "^3.0.6",
+    "@zbryikt/template": "^2.3.45",
+    "bootstrap": "^4.6.1",
+    "fedep": "^1.3.0",
+    "ldcover": "^3.5.4",
+    "ldview": "^1.4.2",
+    "livescript": "^1.6.0",
+    "proxise": "^1.0.1",
+    "uglify-js": "^3.13.1"
+  },
+  "dependencies": {
+    "ldcolor": "^1.1.2"
+  },
+  "frontendDependencies": {
+    "root": "web/static/assets/lib",
+    "modules": [
+      "ldcolor",
+      "@loadingio/bootstrap.ext",
+      "@loadingio/debounce.js",
+      "@loadingio/ldquery",
+      "bootstrap",
+      "ldcover",
+      "ldview",
+      "proxise"
+    ]
+  }
+}
