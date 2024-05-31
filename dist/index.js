@@ -254,7 +254,7 @@ qrcoder.make = function(o){
     ? '#000'
     : typeof o.color !== 'function' ? o.color : null;
   _fc = _fc ? "fill:" + _fc : '';
-  svg = "<svg style=\"margin:5em\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 " + dim + " " + dim + "\" width=\"" + size + "\" height=\"" + size + "\">\n<style type=\"text/css\">rect {\n  width:" + _(delta + 2) + "px;height:" + _(delta + 2) + "px;rx:" + _(round) + "px;ry:" + _(round) + "px;" + _fc + "\n}</style>\n" + list.join('') + "\n</svg>";
+  svg = "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 " + dim + " " + dim + "\" width=\"" + size + "\" height=\"" + size + "\">\n<style type=\"text/css\">rect {\n  width:" + _(delta + 2) + "px;height:" + _(delta + 2) + "px;rx:" + _(round) + "px;ry:" + _(round) + "px;" + _fc + "\n}</style>\n" + list.join('') + "\n</svg>";
   return svg;
 };
 qrcoder.prototype = (ref$ = Object.create(Object.prototype), ref$.make = function(o){

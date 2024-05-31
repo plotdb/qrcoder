@@ -37,7 +37,7 @@ qrcoder.make = (o = {}) ->
   _fc = if !o.color => \#000 else if typeof(o.color) != \function => o.color else null
   _fc = if _fc => "fill:#_fc" else ''
   svg = """
-  <svg style="margin:5em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 #dim #dim" width="#size" height="#size">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 #dim #dim" width="#size" height="#size">
   <style type="text/css">rect {
     width:#{_ delta + 2}px;height:#{_ delta + 2}px;rx:#{_ round}px;ry:#{_ round}px;#_fc
   }</style>
